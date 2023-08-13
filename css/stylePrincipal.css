@@ -8,10 +8,28 @@ main {
   display: flex;
   justify-content: space-around;
 }
+#poker {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  z-index: 9;
+  top: 495px;
+  left: -398px;
+  /* visibility: hidden; */
+}
 
-/* footer {
-  height: 97px;
-  width: 53px;
-  background: rgba(240, 220, 220, 0.97);
-  z-index: 6;
-} */
+.actifPoker {
+  /* visibility: hidden; */
+
+  animation: poker 5s linear forwards;
+}
+@keyframes poker {
+  0% {
+    transform: translateX(0px, 0px);
+  }
+  50% {
+    transform: translateX(840px);
+  }
+  100% {
+  }
+}

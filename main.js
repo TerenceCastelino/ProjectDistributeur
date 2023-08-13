@@ -1,3 +1,4 @@
+const poker = document.getElementById("poker");
 // LE POINTAGES DES BOUTONS DU DISTRIBUTEUR DEBUT <---
 const btnCoca = document.getElementById("coca");
 const btnFanta = document.getElementById("fanta");
@@ -61,6 +62,10 @@ descriptionPresentation.innerHTML = descriptionParagraphe;
 // INJECTER DU TEXTE FIN --->
 
 // EVENEMENT AU CLICK SUR LES BOUTONS DU DISTRIBUTEUR DEBUT <---
+// SOND
+const audio = new Audio();
+// SOND
+
 // ________________________________________________________________________________________________
 btnCoca.addEventListener("click", () => {
   distributeur[0].stock = Distribution(distributeur[0].stock);
@@ -93,8 +98,6 @@ btnCoca.addEventListener("click", () => {
 
 const sond = document.getElementById("sond");
 canetteCoca.addEventListener("click", () => {
-  const audio = new Audio();
-  const audio1 = new Audio();
   audio.src = "./sond/CanetteRototo.mp3";
   audio.play();
 
@@ -109,14 +112,13 @@ canetteCoca.addEventListener("click", () => {
   canetteCoca.classList.add("visible");
   canetteCoca.classList.remove("tomber");
   canetteCoca.classList.remove("visible");
-  audio1.src = "./sond/2510.mp3";
-  audio.play();
 });
 
 // =================================>
 // _____________________________________________________________________________________________
 btnFanta.addEventListener("click", () => {
   distributeur[1].stock = Distribution(distributeur[1].stock);
+  poker.classList.add("actifPoker");
 
   AfficheInfo(
     distributeur[1].nom,
@@ -144,6 +146,9 @@ btnFanta.addEventListener("click", () => {
   }
 });
 canetteFanta.addEventListener("click", () => {
+  audio.src = "./sond/CanetteRototo.mp3";
+  audio.play();
+
   ReactiverChoix(
     btnCoca,
     btnFanta,
@@ -186,6 +191,9 @@ btnSprite.addEventListener("click", () => {
   }
 });
 canetteSprite.addEventListener("click", () => {
+  audio.src = "./sond/CanetteRototo.mp3";
+  audio.play();
+
   ReactiverChoix(
     btnCoca,
     btnFanta,
@@ -229,6 +237,9 @@ btnPepsi.addEventListener("click", () => {
   }
 });
 canettePepsi.addEventListener("click", () => {
+  audio.src = "./sond/CanetteRototo.mp3";
+  audio.play();
+
   ReactiverChoix(
     btnCoca,
     btnFanta,
@@ -270,6 +281,8 @@ btnNestea.addEventListener("click", () => {
   }
 });
 canetteNestea.addEventListener("click", () => {
+  audio.src = "./sond/CanetteRototo.mp3";
+  audio.play();
   ReactiverChoix(
     btnCoca,
     btnFanta,
@@ -311,6 +324,8 @@ btnCocaZero.addEventListener("click", () => {
   }
 });
 canetteCocaZero.addEventListener("click", () => {
+  audio.src = "./sond/CanetteRototo.mp3";
+  audio.play();
   ReactiverChoix(
     btnCoca,
     btnFanta,
