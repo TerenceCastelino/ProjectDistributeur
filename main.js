@@ -16,7 +16,6 @@ const prixSoda = document.getElementById("prix");
 const quantiteSoda = document.getElementById("quantite");
 const etatDeStock = document.getElementById("stock");
 const descriptionSoda = document.getElementById("description");
-console.log(titreSoda);
 // LE POINTAGE POUR L AFFICHAGE FIN --->
 // LA LIAISON DANS LE DOM POUR LES ELEMENT DE LA CLASSE AFFICHAGE DEBUT <---
 affichageElement.appendChild(titreSoda);
@@ -62,9 +61,10 @@ descriptionPresentation.innerHTML = descriptionParagraphe;
 // INJECTER DU TEXTE FIN --->
 
 // EVENEMENT AU CLICK SUR LES BOUTONS DU DISTRIBUTEUR DEBUT <---
+// ________________________________________________________________________________________________
 btnCoca.addEventListener("click", () => {
   distributeur[0].stock = Distribution(distributeur[0].stock);
-  canetteCoca.classList.add("tomber");
+
   AfficheInfo(
     distributeur[0].nom,
     distributeur[0].prix,
@@ -77,11 +77,37 @@ btnCoca.addEventListener("click", () => {
     btnCoca.disabled = true;
     stockCoca.classList.add("signalfalse");
   }
+  if (distributeur[0].stock > -1) {
+    canetteCoca.classList.add("tomber");
+    console.log(distributeur[0].stock);
+    EmpecherPrendrePlusieurCanette(
+      btnCoca,
+      btnFanta,
+      btnSprite,
+      btnPepsi,
+      btnNestea,
+      btnCocaZero
+    );
+  }
 });
 
+canetteCoca.addEventListener("click", () => {
+  ReactiverChoix(
+    btnCoca,
+    btnFanta,
+    btnSprite,
+    btnPepsi,
+    btnNestea,
+    btnCocaZero
+  );
+  canetteCoca.classList.add("visible");
+  canetteCoca.classList.remove("tomber");
+  canetteCoca.classList.remove("visible");
+});
+// _____________________________________________________________________________________________
 btnFanta.addEventListener("click", () => {
   distributeur[1].stock = Distribution(distributeur[1].stock);
-  canetteFanta.classList.add("tomber");
+
   AfficheInfo(
     distributeur[1].nom,
     distributeur[1].prix,
@@ -94,10 +120,36 @@ btnFanta.addEventListener("click", () => {
     btnFanta.disabled = true;
     stockFanta.classList.add("signalfalse");
   }
+  if (distributeur[1].stock > -1) {
+    canetteFanta.classList.add("tomber");
+
+    EmpecherPrendrePlusieurCanette(
+      btnCoca,
+      btnFanta,
+      btnSprite,
+      btnPepsi,
+      btnNestea,
+      btnCocaZero
+    );
+  }
 });
+canetteFanta.addEventListener("click", () => {
+  ReactiverChoix(
+    btnCoca,
+    btnFanta,
+    btnSprite,
+    btnPepsi,
+    btnNestea,
+    btnCocaZero
+  );
+  canetteFanta.classList.add("visible");
+  canetteFanta.classList.remove("tomber");
+  canetteFanta.classList.remove("visible");
+});
+
 btnSprite.addEventListener("click", () => {
   distributeur[2].stock = Distribution(distributeur[2].stock);
-  canetteSprite.classList.add("tomber");
+
   AfficheInfo(
     distributeur[2].nom,
     distributeur[2].prix,
@@ -110,11 +162,37 @@ btnSprite.addEventListener("click", () => {
     btnSprite.disabled = true;
     stockSprite.classList.add("signalfalse");
   }
+  if (distributeur[2].stock > -1) {
+    canetteSprite.classList.add("tomber");
+
+    EmpecherPrendrePlusieurCanette(
+      btnCoca,
+      btnFanta,
+      btnSprite,
+      btnPepsi,
+      btnNestea,
+      btnCocaZero
+    );
+  }
 });
+canetteSprite.addEventListener("click", () => {
+  ReactiverChoix(
+    btnCoca,
+    btnFanta,
+    btnSprite,
+    btnPepsi,
+    btnNestea,
+    btnCocaZero
+  );
+  canetteSprite.classList.add("visible");
+  canetteSprite.classList.remove("tomber");
+  canetteSprite.classList.remove("visible");
+});
+
 // ________________________________________________________________________________
 btnPepsi.addEventListener("click", () => {
   distributeur[3].stock = Distribution(distributeur[3].stock);
-  canettePepsi.classList.add("tomber");
+
   AfficheInfo(
     distributeur[3].nom,
     distributeur[3].prix,
@@ -127,10 +205,35 @@ btnPepsi.addEventListener("click", () => {
     btnPepsi.disabled = true;
     stockPepsi.classList.add("signalfalse");
   }
+  if (distributeur[3].stock > -1) {
+    canettePepsi.classList.add("tomber");
+
+    EmpecherPrendrePlusieurCanette(
+      btnCoca,
+      btnFanta,
+      btnSprite,
+      btnPepsi,
+      btnNestea,
+      btnCocaZero
+    );
+  }
+});
+canettePepsi.addEventListener("click", () => {
+  ReactiverChoix(
+    btnCoca,
+    btnFanta,
+    btnSprite,
+    btnPepsi,
+    btnNestea,
+    btnCocaZero
+  );
+  canettePepsi.classList.add("visible");
+  canettePepsi.classList.remove("tomber");
+  canettePepsi.classList.remove("visible");
 });
 btnNestea.addEventListener("click", () => {
   distributeur[4].stock = Distribution(distributeur[4].stock);
-  canetteNestea.classList.add("tomber");
+
   AfficheInfo(
     distributeur[4].nom,
     distributeur[4].prix,
@@ -143,10 +246,35 @@ btnNestea.addEventListener("click", () => {
     btnNestea.disabled = true;
     stockNestea.classList.add("signalfalse");
   }
+  if (distributeur[4].stock > -1) {
+    canetteNestea.classList.add("tomber");
+
+    EmpecherPrendrePlusieurCanette(
+      btnCoca,
+      btnFanta,
+      btnSprite,
+      btnPepsi,
+      btnNestea,
+      btnCocaZero
+    );
+  }
+});
+canetteNestea.addEventListener("click", () => {
+  ReactiverChoix(
+    btnCoca,
+    btnFanta,
+    btnSprite,
+    btnPepsi,
+    btnNestea,
+    btnCocaZero
+  );
+  canetteNestea.classList.add("visible");
+  canetteNestea.classList.remove("tomber");
+  canetteNestea.classList.remove("visible");
 });
 btnCocaZero.addEventListener("click", () => {
   distributeur[5].stock = Distribution(distributeur[5].stock);
-  canetteCocaZero.classList.add("tomber");
+
   AfficheInfo(
     distributeur[5].nom,
     distributeur[5].prix,
@@ -159,11 +287,33 @@ btnCocaZero.addEventListener("click", () => {
     btnCocaZero.disabled = true;
     stockCoca0.classList.add("signalfalse");
   }
+  if (distributeur[5].stock > -1) {
+    canetteCocaZero.classList.add("tomber");
+
+    EmpecherPrendrePlusieurCanette(
+      btnCoca,
+      btnFanta,
+      btnSprite,
+      btnPepsi,
+      btnNestea,
+      btnCocaZero
+    );
+  }
+});
+canetteCocaZero.addEventListener("click", () => {
+  ReactiverChoix(
+    btnCoca,
+    btnFanta,
+    btnSprite,
+    btnPepsi,
+    btnNestea,
+    btnCocaZero
+  );
+  canetteCocaZero.classList.add("visible");
+  canetteCocaZero.classList.remove("tomber");
+  canetteCocaZero.classList.remove("visible");
 });
 // EVENEMENT AU CLICK SUR LES BOUTONS DU DISTRIBUTEUR FIN --->
 // -----------------------------------------------------
 // EVENEMENT AU CLICK POUR LES CANETTE DEBUT --->
-btnCoca.addEventListener("click", () => {
-  canetteCoca.classList.add("tomber");
-});
 // EVENEMENT AU CLICK POUR LES CANETTE FIN <---
