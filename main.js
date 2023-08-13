@@ -91,7 +91,13 @@ btnCoca.addEventListener("click", () => {
   }
 });
 
+const sond = document.getElementById("sond");
 canetteCoca.addEventListener("click", () => {
+  const audio = new Audio();
+  const audio1 = new Audio();
+  audio.src = "./sond/CanetteRototo.mp3";
+  audio.play();
+
   ReactiverChoix(
     btnCoca,
     btnFanta,
@@ -103,7 +109,11 @@ canetteCoca.addEventListener("click", () => {
   canetteCoca.classList.add("visible");
   canetteCoca.classList.remove("tomber");
   canetteCoca.classList.remove("visible");
+  audio1.src = "./sond/2510.mp3";
+  audio.play();
 });
+
+// =================================>
 // _____________________________________________________________________________________________
 btnFanta.addEventListener("click", () => {
   distributeur[1].stock = Distribution(distributeur[1].stock);
