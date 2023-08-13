@@ -1,0 +1,135 @@
+/* _________________________________________________________ */
+/* LE DISTRIBUTEUR DEBUT ---> */
+.distributeur {
+  background: url(../image/Distributeur/machine3.jpg);
+  background-size: contain;
+  height: 788px;
+  width: 482px;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+.faceTrou {
+  height: 788px;
+  width: 482px;
+  position: relative;
+  z-index: 3;
+}
+/* LE DISTRIBUTEUR DEBUT <--- */
+/* _________________________________________________________ */
+/* LES BOUTONS QUI SERVIRONT A ACTIONNER LA FONCTION POUR RECEVOIR LES BOISSONS DEBUT -->  */
+.bontonBoisson {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  height: 438px;
+  width: 268px;
+  gap: 6px;
+  margin: 0;
+  top: -733px;
+  left: 178px;
+}
+.push {
+  width: 62px;
+  height: 25px;
+}
+.survolle:hover {
+  border: 5px solid rgba(199, 194, 108, 0.498);
+}
+#coca {
+  background: url(../image/logo/cocalogo.jpg) center;
+}
+#fanta {
+  background: url(../image/logo/fantalogo3.png) center;
+}
+#sprite {
+  background: url(../image/logo/spritelogo.jpg) center;
+}
+#pepsi {
+  background: url(../image/logo/Pepsi_Logo_2014.png) center;
+}
+#nestea {
+  background: url(../image/logo/nestea.jpg) center;
+}
+#coca0 {
+  background: url(../image/logo/cocazero.png) center;
+}
+/* LES BOUTONS QUI SERVIRONT A ACTIONNER LA FONCTION POUR RECEVOIR LES BOISSONS DEBUT -->  */
+/* _________________________________________________________ */
+/* SIGNAL DEBUT ---> */
+.signalStock {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  gap: 12.5px;
+  top: -431px;
+  left: -12px;
+}
+.signalStock p {
+  width: 18px;
+  height: 18px;
+}
+/* CLASSLIST DEBUT --->  */
+.signaltrue {
+  background: rgba(4, 156, 87, 0.795);
+}
+.signalfalse {
+  background: rgba(172, 3, 3, 0.795);
+}
+/* CLASSLIST FIN <--- */
+/* SIGNAL FIN <--- */
+/* _________________________________________________________ */
+/* BOUTONS CANETTE DEBUT ---> */
+
+.canette {
+  height: 80px;
+  width: 44px;
+  position: relative;
+  z-index: 2;
+  left: 216px;
+  top: 584px;
+}
+.canette img {
+  height: 97px;
+  width: 53px;
+}
+#canetteCoca {
+  width: 53px;
+  height: 92px;
+}
+#canetteFanta {
+  left: 162px;
+}
+#canetteSprite {
+  left: 115px;
+}
+#canetteNestea {
+  left: 67px;
+}
+#canettePepsi {
+  left: 19px;
+}
+#canetteCocaZero {
+  left: -26px;
+}
+
+/* CLASSLIST DEBUT ---> */
+.tomber {
+  position: relative;
+  animation: TomberCanette linear 350ms forwards;
+}
+@keyframes TomberCanette {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, 100px);
+  }
+}
+/* CLASSLIST FIN <--- */
+/* BOUTONS CANETTE FIN <--- */

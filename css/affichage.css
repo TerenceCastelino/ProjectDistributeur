@@ -1,0 +1,11 @@
+.affichage {
+  border: 3px solid rgba(161, 157, 157, 0.756);
+  margin-top: 60px;
+  height: 37%;
+  width: 25%;
+  font-size: 2rem;
+  background: rgb(8, 8, 8);
+  color: aquamarine;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 15px;
+}

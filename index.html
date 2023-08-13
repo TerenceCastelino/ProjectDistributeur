@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/stylePrincipal.css" />
+    <link rel="stylesheet" href="css/affichage.css" />
+    <link rel="stylesheet" href="css/presentation.css" />
+    <link rel="stylesheet" href="css/distributeur.css" />
+    <script src="tableauDistributeur.js" defer></script>
+    <script src="fonction.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>🥤-Projet du Distributeur🥤</title>
+  </head>
+  <body>
+    <main>
+      <div class="presentation"></div>
+      <div class="alentourDistributeur">
+        <img
+          src="image/Cannette/canette_Coca.png"
+          id="canetteCoca"
+          class="canette"
+        />
+        <img
+          src="image/Cannette/canette_Fanta.png"
+          id="canetteFanta"
+          class="canette"
+        />
+
+        <img
+          src="image/Cannette/canette_Sprite.png"
+          id="canetteSprite"
+          class="canette"
+        />
+
+        <img
+          src="image/Cannette/canette_Nestea.png"
+          id="canetteNestea"
+          class="canette"
+        />
+
+        <img
+          src="image/Cannette/canette_Pepsi.png"
+          id="canettePepsi"
+          class="canette"
+        />
+
+        <img
+          src="image/Cannette/canette_CocaZero.png"
+          id="canetteCocaZero"
+          class="canette"
+        />
+        <div class="distributeur">
+          <img
+            src="./image/Distributeur/machinneTroutransparent.png"
+            class="faceTrou"
+          />
+          <!-- <div class="canette"> -->
+
+          <!-- </div> -->
+          <div class="signalStock">
+            <p id="stockcoca" class="signaltrue"></p>
+            <p id="stockfanta" class="signaltrue"></p>
+            <p id="stocksprite" class="signaltrue"></p>
+            <p id="stockpepsi" class="signaltrue"></p>
+            <p id="stocknestea" class="signaltrue"></p>
+            <p id="stockcoca0" class="signaltrue"></p>
+          </div>
+          <div class="bontonBoisson">
+            <input type="button" value="" id="coca" class="survolle push" />
+            <input type="button" value="" id="fanta" class="survolle push" />
+            <input type="button" value="" id="sprite" class="survolle push" />
+            <input type="button" value="" id="pepsi" class="survolle push" />
+            <input type="button" value="" id="nestea" class="survolle push" />
+            <input type="button" value="" id="coca0" class="survolle push" />
+          </div>
+        </div>
+      </div>
+      <div class="affichage">
+        <h2>titre</h2>
+        <!-- <img src="image/cannetteCoca.jpg" alt="" /> -->
+        <p id="prix">le prix</p>
+        <p id="quantite">quantitée</p>
+        <p id="stock">etat de stock</p>
+        <p id="description">la description</p>
+      </div>
+    </main>
+    <!-- <footer>footer</footer> -->
+  </body>
+</html>
